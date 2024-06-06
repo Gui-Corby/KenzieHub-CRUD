@@ -1,0 +1,136 @@
+@import "../../../styles/typograph.scss";
+@import "../../../styles/formFillBox.scss";
+
+
+.main_register {
+    @extend %paragraph;
+    background-color: var(--grey-4);
+    height: 100%;
+}
+
+.header_register {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .link_to_login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--grey-0);
+        background-color: var(--grey-3);
+        width: 68px;
+        height: 40px;
+        border-radius: 4px;
+    }
+}
+
+.form_box {
+    margin-top: 3rem;
+    background-color: var(--grey-3);
+    border-radius: 4px;
+    height: 787px;
+    overflow-y: auto;
+    // height: 57.75rem;
+
+    .top_form {
+        text-align: center;
+        padding-top: 2rem;
+
+        h2 {
+            @extend %title;
+        }
+
+        p {
+            @extend %headline;
+            padding-top: 2rem;
+            color: var(--grey-1);
+        }
+    }
+
+    form {
+        padding-top: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 12px;
+
+        p {
+            color: var(--grey-0);
+            font-size: 13px;
+        }
+
+        label {
+            color: var(--grey-0);
+            font-weight: 400;
+            font-size: .75rem;
+        }
+
+        input {
+
+            @extend %form_fill_boxes;
+
+            color: var(--grey-0);
+
+            ::placeholder {
+                color: var(--grey-1);
+                font-weight: 400;
+                font-size: 1rem;
+
+            }
+
+
+
+            &:focus {
+
+                border-color: var(--grey-0);
+                color: var(--grey-0);
+
+            }
+        }
+
+        select {
+            @extend %form_fill_boxes;
+            color: var(--grey-1);
+            appearance: none;
+            background-image: url("../../../assets/arrowDown.png");
+            background-repeat: no-repeat;
+            background-position: right 0.5rem center;
+            background-size: 1rem;
+
+            &:focus {
+                color: white;
+            }
+        }
+
+        button {
+            background-color: var(--color-primary);
+            width: 300px;
+            max-width: 100%;
+            height: 44px;
+            margin-top: 0.8rem;
+            color: white;
+            font-weight: 500;
+            border-radius: 4px;
+        }
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+    .form_box {
+        form {
+            button {
+
+                background-color: var(--color-primary-negative);
+            }
+        }
+    }
+
+
+}

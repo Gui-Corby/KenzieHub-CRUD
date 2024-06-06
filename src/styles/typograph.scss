@@ -1,0 +1,25 @@
+%title {
+    font-family: var(--font);
+    color: var(--grey-0);
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+%paragraph {
+    font-family: var(--font);
+    // font-weight: ;
+    // color: ;
+}
+
+%headline {
+    font-family: var(--font);
+    font-weight: 400;
+    font-size: .75rem;
+}
+
+%headlineBold {
+    font-family: var(--font);
+    font-weight: 600;
+    font-size: .75rem;
+    color: var(--grey-1);
+}
