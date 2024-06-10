@@ -15,8 +15,6 @@ export const TechProvider = ({ children }) => {
 
   const client = useQueryClient();
 
-  // console.log(tech);
-  // console.log(setTech);
   const revalidate = () => {
     client.invalidateQueries({ queryKey: ["techs"] });
   };

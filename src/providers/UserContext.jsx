@@ -24,7 +24,6 @@ export const UserProvider = ({ children }) => {
             Authorization: `Bearer ${token}`,
           },
         });
-        // console.log(data);
         setUser(data);
         setTech(data.techs);
         navigate("/");
@@ -59,11 +58,9 @@ export const UserProvider = ({ children }) => {
   const userRegister = async (formData) => {
     try {
       const { data } = await api.post("/users", formData);
-      //   const { data_token } = await api.post("/sessions");
+
       toast.success("Conta criada com sucesso!");
       setUser(data);
-      //   localStorage.setItem("@USERID", data.user.id);
-      //   localStorage.setItem("@TOKEN", data_token.token);
 
       navigate("/login");
     } catch (error) {
