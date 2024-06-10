@@ -14,8 +14,15 @@ export const CreateTechModal = ({ onClose }) => {
   const { createTech } = useContext(TechContext)
 
   const onSubmit = (formData) => {
-    createTech.mutate(formData);
-    reset();
+    createTech.mutate(formData, {
+      onSuccess: () => {
+        reset();
+        onClose();
+      },
+      onError: (error) => {
+        console.log(error);
+      },
+    })
   }
 
   return (

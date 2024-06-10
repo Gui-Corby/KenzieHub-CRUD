@@ -9,7 +9,7 @@ export const TechList = () => {
     const { tech } = useContext(userContext)
 
     return (
-        <ul>
+        <ul className={styles.tech_list}>
             {tech.map((techItem) => (
 
             <TechCard key={techItem.id} tech={techItem} />

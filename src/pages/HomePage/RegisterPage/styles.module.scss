@@ -6,6 +6,7 @@
     @extend %paragraph;
     background-color: var(--grey-4);
     height: 100%;
+   
 }
 
 .header_register {
@@ -131,6 +132,10 @@
             }
         }
     }
+}
 
-
+@media (min-height: 940px) {
+    .main_register {
+        height: 100vh;
+    }
 }

@@ -19,9 +19,16 @@ export const EditTechModal = ({ onClose }) => {
   });
 
   const onSubmit = (formData) => {
-    editTech.mutate(formData);
-    reset();
-  };
+    editTech.mutate(formData, {
+      onSuccess: () => {
+        reset();
+        onClose();
+      },
+      onError: (error) => {
+        console.log(error);
+      },
+    });
+  }
 
   useEffect(() => {
     if (editingTech) {
